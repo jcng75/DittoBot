@@ -6,3 +6,5 @@ def replace_function(string, fL):
     else:
       checked_string += string[i]
   return checked_string
+
+
