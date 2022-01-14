@@ -28,8 +28,10 @@ def calc(string):
     return "Invalid expression!"
 
 
+# calls the calculate command
+
 @commands.command(name="calculate", aliases=['c', 'calc'])
 async def _calculate(ctx):
   expression = str(ctx.message.content).split(' ', 1)[1]
-  print(f'Calculate command called from {ctx.author}, {expression}')
+  print(f'Calculate command called from {ctx.author.name}, {expression}')
   await ctx.send(calc(expression))
